@@ -1,6 +1,6 @@
 # Program Comprehension and Code Complexity Metrics: An fMRI Study
 
-This repository contains the replication package and additional information on our submitted paper.
+This repository contains the replication package and additional information on our paper at ICSE2021.
 
 ## Replication Package
 
