@@ -1,0 +1,1 @@
+For convenience, this directory contains all output that running the `/analysis/` script with the data from our ICSE'21 study would yield.

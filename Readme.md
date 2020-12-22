@@ -1,29 +1,47 @@
 # Program Comprehension and Code Complexity Metrics: An fMRI Study
 
-This repository contains the replication package and additional information on our paper at ICSE2021.
+This repository contains the replication package, analysis scripts, and additional information on our paper accepted at ICSE 2021.
 
-## Replication Package
+Publication: Norman Peitek, Sven Apel, Chris Parnin, André Brechmann, and Janet Siegmund. *Program Comprehension and Code Complexity Metrics: An fMRI Study*. In Proceedings of the International Conference of Software Engineering (ICSE), 2021
+
+# Replication Package
 
 In `/replication`, we provide:
 
-- all used stimuli for the comprehension, control condition, and distractor tasks (`/tasks-*`)
+- all used stimuli for the comprehension, control condition, and distractor tasks (`/tasks-*`) either as image and/or text file. We used our [CodeImageGenerator](https://github.com/peitek/CodeImageGenerator) to create image files for our Java code snippets.
 - experiment protocol for the fMRI session
-- analysis protocol
 - the meta protocol for the post-session interview
 
-## Experiment Data: Pilot Study
+# Data
 
-We share our insights from the pilot studies in `/pilot-data`.
+In `/data`, we share all raw and preprocessed data that we can. Due to our local privacy law, we cannot publicly provide the fMRI data at this time. Please contact us for individual solutions.
 
-Due to our local privacy law, we cannot publicly provide the fMRI data at this time. You can contact us to individually share experiment data (once double-blind is lifted).
+# Analysis
+
+In `/analysis`, we share our analysis scripts that process the input data, compute the results, create plots, and run statistics.
+
+To run the script yourself, you will need:
+
+- Python 3.x
+- numpy
+- pandas
+- scipy
+- seaborn
+- statsmodels
+
+Once your system is ready, start the `/analysis/main.py`.
+
+# Results
+
+For convenience, we provide all output that the analysis script yields for our data in `/output`.
 
 ## Experiment Data: fMRI Correlations
 
-In addition to the selected plots presented in the paper, we added all correlation plots in `/plots`.
+In addition to the selected plots presented in the paper, we added all correlation plots in `/output/plots`.
 
 ## Experiment Data: Additional Metrics
 
-We explored overall 41 additional metrics. In `/Metrics.md`, we provide an description of each metric.
+We explored overall 41 additional metrics. In `/data/metrics/Metrics.md`, we provide a description of each metric.
 
 In the paper, we provide a shortened overview. Here is the full correlation table:
 
@@ -65,3 +83,7 @@ In the paper, we provide a shortened overview. Here is the full correlation tabl
 | Halstead    | 0.485714  | 0.542857  | 0.428571  | 0.600000  | 0.393218 | 0.209351 | 0.213938 | 0.288564 | 0.600000 |
 | Sonar_Cog   | 0.239046  | 0.139443  | 0.039841  | 0.298807  | 0.237528 | 0.057054 | 0.016282 | 0.131811 | 0.298807 |
 | Sonar_Cyclo | 0.102869  | 0.123443  | 0.000000  | 0.205738  | 0.051420 | 0.022982 | 0.000800 | 0.046978 | 0.205738 |
+
+# Contact
+
+If you have questions, please contact me directly: `norman.peitek@lin-magdeburg.de`. Thank you!
