@@ -1,16 +1,15 @@
 import numpy
 import pandas as pd
 import matplotlib.pyplot as plt
-
-import BrainActivationAnalysis
-from analysis import BehavioralSubjective
-
-plt.rcParams.update({'font.size': 26})
 import seaborn as sns
 import scipy
 
-# TODO this file is supposed to analyze complexity metrics versus behavioral data
+from analysis import BehavioralSubjective, BrainActivationAnalysis
+from config import ROOT_DIR
+
+plt.rcParams.update({'font.size': 26})
 graph_label = dict(color='#202020', alpha=0.9)
+
 
 def plot_correlation(df, computeResponseTime, ba, activation=True):
     if computeResponseTime:
@@ -53,11 +52,10 @@ def plot_correlation(df, computeResponseTime, ba, activation=True):
     else:
         pre = 'Deactivation_'
 
-    plt.savefig('output/' + pre + ba + '_' + variable + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/' + pre + ba + '_' + variable + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def compute_behavioral_brain(df_ba_cond, behavioral_data, activation):
-
     behavioral_ba = pd.merge(df_ba_cond, behavioral_data, how='left', left_on=['participant', 'Snippet'], right_on=['Participant', 'Snippet'])
 
     # check whether there is response times < 5s and exclude them since they are accidental clicks
@@ -76,8 +74,8 @@ def compute_behavioral_brain(df_ba_cond, behavioral_data, activation):
 
 
 def main():
-    df_ba_part_cond_act = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Activation.csv')
-    df_ba_part_cond_deact = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Deactivation.csv')
+    df_ba_part_cond_act = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Activation.csv')
+    df_ba_part_cond_deact = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Deactivation.csv')
 
     behavioral_data = BehavioralSubjective.load_behavioral_data()
 

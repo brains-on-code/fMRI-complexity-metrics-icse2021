@@ -8,10 +8,11 @@ from scipy.stats import zscore
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 
+from analysis import BehavioralSubjective
+from config import ROOT_DIR
+
 plt.rcParams.update({'font.size': 24})
 plt.rcParams['font.family'] = 'Calibri'
-
-import BehavioralSubjective
 
 graph_label = dict(color='#101010', alpha=0.95)
 
@@ -47,9 +48,9 @@ def plot_ba_subj_rating(df, ba, activation=True, participant=None):
     plt.tight_layout()
 
     if activation:
-        prefix = 'output/act_subj_'
+        prefix = ROOT_DIR + '/analysis/output/act_subj_'
     else:
-        prefix = 'output/deact_subj_'
+        prefix = ROOT_DIR + '/analysis/output/deact_subj_'
 
     if participant:
         prefix += participant + '_'
@@ -112,9 +113,9 @@ def plot_ba_for_metric(df, metric, ba, activation=True):
     plt.tight_layout()
 
     if activation:
-        prefix = 'output/activation_'
+        prefix = ROOT_DIR + '/analysis/output/activation_'
     else:
-        prefix = 'output/deactivation_'
+        prefix = ROOT_DIR + '/analysis/output/deactivation_'
 
     plt.savefig(prefix + metric + '_' + ba + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
@@ -154,11 +155,11 @@ def compute_statistics(df, activation=True):
 
 
 def compute_ba_subj_rating(activation=True):
-    df_subj_complexity = pd.read_csv('../data/subjective/SnippetSubjectiveComplexityRatings.csv')
+    df_subj_complexity = pd.read_csv(ROOT_DIR + '/data/subjective/SnippetSubjectiveComplexityRatings.csv')
     if activation:
-        df_ba_part_cond = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Activation.csv')
+        df_ba_part_cond = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Activation.csv')
     else:
-        df_ba_part_cond = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Deactivation.csv')
+        df_ba_part_cond = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Participant_Deactivation.csv')
 
     df_ba_part_cond_subj = pd.merge(df_ba_part_cond, df_subj_complexity, left_on=['participant', 'Snippet'], right_on=['participant', 'snippet'])
     df_ba_part_cond_subj.sort_values(by='participant', inplace=True)
@@ -174,8 +175,8 @@ def compute_ba_subj_rating(activation=True):
 
 def main():
     print('\n# Analyzing fMRI and complexity metrics data')
-    df_ba_cond_act = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Activation.csv')
-    df_ba_cond_deact = pd.read_csv('../data/fMRI/fMRI_Analyzed_BA_Snippet_Deactivation.csv')
+    df_ba_cond_act = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Activation.csv')
+    df_ba_cond_deact = pd.read_csv(ROOT_DIR + '/data/fMRI/fMRI_Analyzed_BA_Snippet_Deactivation.csv')
 
     snippet_metrics = BehavioralSubjective.load_snippet_metrics()
 

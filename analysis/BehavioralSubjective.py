@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy
 
+from config import ROOT_DIR
+
 plt.rcParams.update({'font.size': 26})
 
 graph_label = dict(color='#202020', alpha=0.9)
@@ -14,7 +16,7 @@ graph_label = dict(color='#202020', alpha=0.9)
 
 def load_snippet_metrics():
     print('\n##### \nread complexity metric data')
-    snippet_metrics = pd.read_csv("../data/metrics/SnippetComplexityMetricsValues.csv", delimiter=",")
+    snippet_metrics = pd.read_csv(ROOT_DIR + "/data/metrics/SnippetComplexityMetricsValues.csv", delimiter=",")
     snippet_metrics = snippet_metrics.astype('float', errors='ignore')
     print(snippet_metrics.head(5))
     return snippet_metrics
@@ -23,7 +25,7 @@ def load_snippet_metrics():
 def load_behavioral_data():
     print('\n##### \nread behavioral data')
 
-    behavioral_data = pd.read_csv("../data/behavioral/ParticipantBehavior.csv", delimiter=",")
+    behavioral_data = pd.read_csv(ROOT_DIR + "/data/behavioral/ParticipantBehavior.csv", delimiter=",")
     behavioral_data = behavioral_data.astype('float', errors='ignore')
 
     behavioral_data = behavioral_data[behavioral_data['Condition'] == "Comprehension"]
@@ -64,7 +66,7 @@ def plot_correlation_correctness(df, metric):
     sns.despine()
     plt.tight_layout()
 
-    plt.savefig('output/' + metric + '_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/' + metric + '_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def plot_correlation_responsetime(df, metric):
@@ -97,7 +99,7 @@ def plot_correlation_responsetime(df, metric):
     sns.despine()
     plt.tight_layout()
 
-    plt.savefig('output/' + metric + '_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/' + metric + '_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def plot_correlation_subjcomplexity_metrics(df, metric):
@@ -130,7 +132,7 @@ def plot_correlation_subjcomplexity_metrics(df, metric):
     sns.despine()
     plt.tight_layout()
 
-    plt.savefig('output/SubjComplexity_' + metric + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_' + metric + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def plot_correlation_subjcomplexity_responsetime(df):
@@ -158,7 +160,7 @@ def plot_correlation_subjcomplexity_responsetime(df):
     sns.despine()
     plt.tight_layout()
 
-    plt.savefig('output/SubjComplexity_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def plot_correlation_subjcomplexity_correctness(df):
@@ -186,7 +188,7 @@ def plot_correlation_subjcomplexity_correctness(df):
     sns.despine()
     plt.tight_layout()
 
-    plt.savefig('output/SubjComplexity_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
 
 
 def select_color_for_metric(metric):
@@ -242,7 +244,7 @@ def main():
 
     # correlate with behavioral data
     print('\n##### \n correlating subjective complexity with behavioral data')
-    snippet_subjective_complexity = pd.read_csv('../data/subjective/SnippetSubjectiveComplexityRatings.csv')
+    snippet_subjective_complexity = pd.read_csv(ROOT_DIR + '/data/subjective/SnippetSubjectiveComplexityRatings.csv')
 
     print('mean:' + str(snippet_subjective_complexity['subj_complexity'].mean()))
     print('std:' + str(snippet_subjective_complexity['subj_complexity'].std(ddof=1)))
