@@ -76,7 +76,7 @@ def plot_ba_for_metric(df, metric, ba, activation=True):
 
     if metric == "LOC":
         if activation:
-            if ba is "BA44":
+            if ba == "BA44":
                 plt.ylabel("Activation in %\nBroca")
             else:
                 plt.ylabel("Activation in %\n" + ba)
@@ -85,8 +85,8 @@ def plot_ba_for_metric(df, metric, ba, activation=True):
     else:
         plt.ylabel("")
 
-    if ba is "BA44":
-        plt.xlabel(metric, color=color)
+    if ba == "BA44":
+        plt. xlabel(metric, color=color)
     else:
         plt.xlabel("")
 
