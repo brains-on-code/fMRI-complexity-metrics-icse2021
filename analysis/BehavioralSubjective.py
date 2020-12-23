@@ -54,10 +54,11 @@ def plot_correlation_correctness(df, metric):
     plt.xlabel(metric, color=color)
 
     corr = df[metric].corr(df['Correct'], method='kendall')
-    print('Kendall corr:', corr)
+    print('Metric: ' + metric + ' ~  Correctness')
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df[metric], df['ResponseTime'])
-    print('r squared:', r_value**2)
+    print('-> r squared:', r_value**2)
 
     left, right = plt.xlim()
     ax1.text(left+((right-left)/40), 14, 'Kendall τ: ' + format(corr, '.2f'), fontdict=graph_label)
@@ -67,6 +68,7 @@ def plot_correlation_correctness(df, metric):
     plt.tight_layout()
 
     plt.savefig(ROOT_DIR + '/analysis/output/' + metric + '_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(plt.gcf())
 
 
 def plot_correlation_responsetime(df, metric):
@@ -87,10 +89,11 @@ def plot_correlation_responsetime(df, metric):
     plt.xlabel("")
 
     corr = df[metric].corr(df['ResponseTime'], method='kendall')
-    print('Kendall corr:', corr)
+    print('Metric: ' + metric + ' ~  ResponseTime')
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df[metric], df['ResponseTime'])
-    print('r squared:', r_value**2)
+    print('-> r squared:', r_value**2)
 
     left, right = plt.xlim()
     ax1.text(left+((right-left)/40), 8, 'Kendall τ: ' + format(corr, '.2f'), fontdict=graph_label)
@@ -100,6 +103,7 @@ def plot_correlation_responsetime(df, metric):
     plt.tight_layout()
 
     plt.savefig(ROOT_DIR + '/analysis/output/' + metric + '_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(plt.gcf())
 
 
 def plot_correlation_subjcomplexity_metrics(df, metric):
@@ -120,10 +124,11 @@ def plot_correlation_subjcomplexity_metrics(df, metric):
     plt.xlabel(metric, color=color)
 
     corr = df[metric].corr(df['subj_complexity'], method='kendall')
-    print('Kendall corr:', corr)
+    print('Metric: ' + metric + ' ~ SubjComplexity')
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df[metric], df['subj_complexity'])
-    print('r squared:', r_value**2)
+    print('-> r squared:', r_value**2)
 
     left, right = plt.xlim()
     ax1.text(left+((right-left)/40), 10, 'Kendall τ: ' + format(corr, '.2f'), fontdict=graph_label)
@@ -133,6 +138,7 @@ def plot_correlation_subjcomplexity_metrics(df, metric):
     plt.tight_layout()
 
     plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_' + metric + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(plt.gcf())
 
 
 def plot_correlation_subjcomplexity_responsetime(df):
@@ -145,10 +151,11 @@ def plot_correlation_subjcomplexity_responsetime(df):
     plt.ylim((0, 61))
 
     corr = df['subj_complexity'].corr(df['ResponseTime'], method='kendall')
-    print('Kendall corr:', corr)
+    print('SubjComplexity ~ ResponseTime')
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df['subj_complexity'], df['ResponseTime'])
-    print('r squared:', r_value**2)
+    print('-> r squared:', r_value**2)
 
     plt.ylabel("Response Time in sec.")
     plt.xlabel("Subjective Complexity Rating")
@@ -161,6 +168,7 @@ def plot_correlation_subjcomplexity_responsetime(df):
     plt.tight_layout()
 
     plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_ResponseTime.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(plt.gcf())
 
 
 def plot_correlation_subjcomplexity_correctness(df):
@@ -173,10 +181,11 @@ def plot_correlation_subjcomplexity_correctness(df):
     plt.ylim((0, 100))
 
     corr = df['subj_complexity'].corr(df['Correct'], method='kendall')
-    print('Kendall corr:', corr)
+    print('SubjComplexity ~ Correctness')
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df['subj_complexity'], df['Correct'])
-    print('r squared:', r_value ** 2)
+    print('-> r squared:', r_value ** 2)
 
     plt.ylabel("Correct Responses in %")
     plt.xlabel("Subjective Complexity Rating")
@@ -189,6 +198,7 @@ def plot_correlation_subjcomplexity_correctness(df):
     plt.tight_layout()
 
     plt.savefig(ROOT_DIR + '/analysis/output/SubjComplexity_Correctness.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.close(plt.gcf())
 
 
 def select_color_for_metric(metric):
@@ -231,16 +241,13 @@ def main():
     snippet_correctness = snippet_behavioral.groupby('Snippet').mean()
     snippet_correctness["Correct"] = snippet_correctness['Correct'].apply(convert_to_percent)
 
-    # create plots for metrics ~ response time
-    plot_correlation_responsetime(snippet_behavioral, "LOC")
-    plot_correlation_responsetime(snippet_behavioral, "DepDegree")
-    plot_correlation_responsetime(snippet_behavioral, "McCabe")
-    plot_correlation_responsetime(snippet_behavioral, "Halstead")
+    # create plots for metrics ~ response time & correctness
+    metrics = ["LOC", "DepDegree", "McCabe", "Halstead"]  # for a small run with the four main representatives
+    metrics = list(snippet_metrics)[2:]  # for a full run
 
-    plot_correlation_correctness(snippet_correctness, "LOC")
-    plot_correlation_correctness(snippet_correctness, "DepDegree")
-    plot_correlation_correctness(snippet_correctness, "McCabe")
-    plot_correlation_correctness(snippet_correctness, "Halstead")
+    for metric in metrics:
+        plot_correlation_responsetime(snippet_behavioral, metric)
+        plot_correlation_correctness(snippet_correctness, metric)
 
     # correlate with behavioral data
     print('\n##### \n correlating subjective complexity with behavioral data')

@@ -34,6 +34,7 @@ def plot_ba_subj_rating(df, ba, activation=True, participant=None):
     plt.xlabel("Subjective Complexity Rating")
 
     corr = df['subj_complexity'].corr(df[ba], method='kendall')
+    print('subj_complexity: ~  BA: ' + ba)
     print('Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df['subj_complexity'], df[ba])
@@ -56,6 +57,7 @@ def plot_ba_subj_rating(df, ba, activation=True, participant=None):
         prefix += participant + '_'
 
     plt.savefig(prefix + ba + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.clf()
 
 
 def plot_ba_for_metric(df, metric, ba, activation=True):
@@ -89,10 +91,11 @@ def plot_ba_for_metric(df, metric, ba, activation=True):
         plt.xlabel("")
 
     corr = df[metric].corr(df[ba], method='kendall')
-    print('Kendall corr:', corr)
+    print('Metric: ' + metric + ' ~  BA: ' + ba)
+    print('-> Kendall corr:', corr)
 
     slope, intercept, r_value, p_value, std_err = scipy.stats.linregress(df[metric], df[ba])
-    print('r squared:', r_value ** 2)
+    print('-> r squared:', r_value ** 2)
 
     axes = plt.gca()
     if activation:
@@ -118,6 +121,8 @@ def plot_ba_for_metric(df, metric, ba, activation=True):
         prefix = ROOT_DIR + '/analysis/output/deactivation_'
 
     plt.savefig(prefix + metric + '_' + ba + '.pdf', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.clf()
+    plt.close(fig)
 
 
 def get_bas(activation):
@@ -130,15 +135,16 @@ def get_bas(activation):
     return bas
 
 
-def create_plots(df, activation=True):
+def create_plots(df, snippet_metrics, activation=True):
     bas = get_bas(activation)
 
     # plot the stats
     for ba in bas:
-        plot_ba_for_metric(df, 'LOC', ba, activation)
-        plot_ba_for_metric(df, 'DepDegree', ba, activation)
-        plot_ba_for_metric(df, 'McCabe', ba, activation)
-        plot_ba_for_metric(df, 'Halstead', ba, activation)
+        metrics = ["LOC", "DepDegree", "McCabe", "Halstead"]  # for a small run with the four main representatives
+        metrics = list(snippet_metrics)[2:]  # for a full run
+
+        for metric in metrics:
+            plot_ba_for_metric(df, metric, ba, activation)
 
 
 def compute_statistics(df, activation=True):
@@ -183,8 +189,8 @@ def main():
     df_ba_cond_act = pd.merge(df_ba_cond_act, snippet_metrics, how='left', left_on=['condition'], right_on=['Snippet'])
     df_ba_cond_deact = pd.merge(df_ba_cond_deact, snippet_metrics, how='left', left_on=['condition'], right_on=['Snippet'])
 
-    create_plots(df_ba_cond_act, True)
-    create_plots(df_ba_cond_deact, False)
+    create_plots(df_ba_cond_act, snippet_metrics, True)
+    create_plots(df_ba_cond_deact, snippet_metrics, False)
 
     compute_statistics(df_ba_cond_act, True)
     compute_statistics(df_ba_cond_deact, False)
