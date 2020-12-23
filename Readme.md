@@ -1,5 +1,7 @@
 # Program Comprehension and Code Complexity Metrics: An fMRI Study
 
+![Python analysis pipeline](https://github.com/brains-on-code/fMRI-complexity-metrics-icse2021/workflows/Python%20analysis%20pipeline/badge.svg)
+
 This repository contains the replication package, analysis scripts, and additional information on our paper accepted at ICSE 2021.
 
 Publication: Norman Peitek, Sven Apel, Chris Parnin, André Brechmann, and Janet Siegmund. *Program Comprehension and Code Complexity Metrics: An fMRI Study*. In Proceedings of the International Conference of Software Engineering (ICSE), 2021
