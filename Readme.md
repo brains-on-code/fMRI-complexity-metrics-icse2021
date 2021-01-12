@@ -1,6 +1,7 @@
 # Program Comprehension and Code Complexity Metrics: An fMRI Study
 
 ![Python analysis pipeline](https://github.com/brains-on-code/fMRI-complexity-metrics-icse2021/workflows/Python%20analysis%20pipeline/badge.svg)
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This repository contains the replication package, analysis scripts, and additional information on our paper accepted at ICSE 2021.
 
@@ -85,6 +86,14 @@ In the paper, we provide a shortened overview. Here is the full correlation tabl
 | Halstead    | 0.485714  | 0.542857  | 0.428571  | 0.600000  | 0.393218 | 0.209351 | 0.213938 | 0.288564 | 0.600000 |
 | Sonar_Cog   | 0.239046  | 0.139443  | 0.039841  | 0.298807  | 0.237528 | 0.057054 | 0.016282 | 0.131811 | 0.298807 |
 | Sonar_Cyclo | 0.102869  | 0.123443  | 0.000000  | 0.205738  | 0.051420 | 0.022982 | 0.000800 | 0.046978 | 0.205738 |
+
+# License
+
+This repository is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 # Contact
 
