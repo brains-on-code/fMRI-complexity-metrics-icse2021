@@ -27,21 +27,39 @@ In `/analysis`, we share our analysis scripts that process the input data, compu
 To run the script yourself, you will need:
 
 - Python 3.x
+- matplotlib
 - numpy
 - pandas
+- pytest
 - scipy
 - seaborn
 - statsmodels
 
-Once your system is ready, start the `/analysis/main.py`.
+You can install all dependencies via:
+
+```bash
+pip install -r requirements.txt
+```
+
+Once your system is ready, start the pipeline:
+
+```bash
+python main.py
+
+## or
+
+pytest
+```
+
+The analysis output is located in `/analysis/output`.
 
 # Results
 
-For convenience, we provide all output that the analysis script yields for our data in `/output`.
+For convenience, we provide all output that the analysis script yields for our data in `/analysis/output`.
 
 ## Experiment Data: fMRI Correlations
 
-In addition to the selected plots presented in the paper, we added all correlation plots in `/output/plots`.
+In addition to the selected plots presented in the paper, we added all correlation plots in `/analysis/output`.
 
 ## Experiment Data: Additional Metrics
 
