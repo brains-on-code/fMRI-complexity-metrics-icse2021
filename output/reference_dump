@@ -1,0 +1,1230 @@
+
+##### 
+read behavioral data
+-> found data of the following participants: ['p02' 'p01' 'p03' 'p04' 'p05' 'p06' 'p07' 'p08' 'p09' 'p10' 'p11' 'p12'
+ 'p13' 'p14' 'p15' 'p16' 'p17' 'p18' 'p19']
+  Participant      Condition  Algorithm  ... OverallClicks  ResponseTime  ClickTime
+0         p02  Comprehension       Loop  ...           0.0       60000.0        NaN
+1         p02  Comprehension       Loop  ...           0.0       60000.0        NaN
+2         p02  Comprehension  Recursion  ...           1.0       38815.0      296.0
+3         p02  Comprehension     IfElse  ...           1.0       40162.0      300.0
+4         p02  Comprehension     IfElse  ...           1.0       21965.0      281.0
+
+[5 rows x 14 columns]
+Kendall corr: 0.5666666666666667
+r squared: 0.6914774476858213
+Kendall corr: -0.6268924152476126
+r squared: 0.5318240033313184
+Kendall corr: 0.7166666666666667
+r squared: 0.8231846512834636
+Kendall corr: -0.7127680885692035
+r squared: 0.7041589636231703
+Kendall corr: 0.7
+r squared: 0.7679085748600631
+Kendall corr: -0.6784178192405671
+r squared: 0.5131502791145215
+Kendall corr: 0.65
+r squared: 0.6744573249101519
+Kendall corr: -0.6268924152476126
+r squared: 0.4952341284322303
+Kendall corr: -0.6333333333333333
+r squared: 0.6513353027404628
+Kendall corr: 0.6955929539048853
+r squared: 0.6122175240744023
+Kendall corr: -0.5333333333333333
+r squared: 0.640355932858208
+Kendall corr: 0.6097172805832944
+r squared: 0.548168956824855
+
+##### 
+-> all done \o/
+
+##### 
+read complexity metric data
+                 Snippet  Algorithm  DepDegree  ...      V   vG  CognitiveComplexity
+0           ArrayAverage      Loops       17.0  ...  116.0  2.0                  1.0
+1      ContainsSubstring      Loops       29.0  ...  227.0  6.0                 14.0
+2            CountVowels      Loops       22.0  ...  169.0  4.0                  6.0
+3               DumbSort     IfElse       61.0  ...  211.0  6.0                  5.0
+4  GreatestCommonDivisor  Recursion       33.0  ...  129.0  4.0                  5.0
+
+[5 rows x 37 columns]
+
+##### 
+read behavioral data
+-> found data of the following participants: ['p02' 'p01' 'p03' 'p04' 'p05' 'p06' 'p07' 'p08' 'p09' 'p10' 'p11' 'p12'
+ 'p13' 'p14' 'p15' 'p16' 'p17' 'p18' 'p19']
+  Participant      Condition  Algorithm  ... OverallClicks  ResponseTime  ClickTime
+0         p02  Comprehension       Loop  ...           0.0       60000.0        NaN
+1         p02  Comprehension       Loop  ...           0.0       60000.0        NaN
+2         p02  Comprehension  Recursion  ...           1.0       38815.0      296.0
+3         p02  Comprehension     IfElse  ...           1.0       40162.0      300.0
+4         p02  Comprehension     IfElse  ...           1.0       21965.0      281.0
+
+[5 rows x 14 columns]
+Metric: DepDegree ~  ResponseTime
+-> Kendall corr: 0.2548927198153695
+-> r squared: 0.07208533157777698
+Metric: DepDegree ~  Correctness
+-> Kendall corr: -0.42427820566400704
+-> r squared: 0.21278169847278314
+Metric: LOC ~  ResponseTime
+-> Kendall corr: 0.22087952453972434
+-> r squared: 0.0974992311907755
+Metric: LOC ~  Correctness
+-> Kendall corr: -0.46915522596174936
+-> r squared: 0.28659128708455717
+Metric: McCabe ~  ResponseTime
+-> Kendall corr: 0.059258285369639736
+-> r squared: 0.005020710373250426
+Metric: McCabe ~  Correctness
+-> Kendall corr: -0.10069309000319977
+-> r squared: 0.016617889503153863
+Metric: Halstead ~  ResponseTime
+-> Kendall corr: 0.24534870431984213
+-> r squared: 0.08732716341327365
+Metric: Halstead ~  Correctness
+-> Kendall corr: -0.4641722099133472
+-> r squared: 0.2565155668439979
+Metric: BRANCH ~  ResponseTime
+-> Kendall corr: 0.2562341373748363
+-> r squared: 0.08386040457948359
+Metric: BRANCH ~  Correctness
+-> Kendall corr: -0.48143876311607925
+-> r squared: 0.25244668475909465
+Metric: CALL ~  ResponseTime
+-> Kendall corr: 0.040902312657897684
+-> r squared: 0.00395093146132758
+Metric: CALL ~  Correctness
+-> Kendall corr: -0.027328117197209838
+-> r squared: 0.010129611256564933
+Metric: CALLED ~  ResponseTime
+-> Kendall corr: -0.13447850587135096
+-> r squared: 0.01147210480664533
+Metric: CALLED ~  Correctness
+-> Kendall corr: 0.24857728847995222
+-> r squared: 0.03305163882117941
+Metric: CALLEDp ~  ResponseTime
+-> Kendall corr: -0.13447850587135096
+-> r squared: 0.01147210480664533
+Metric: CALLEDp ~  Correctness
+-> Kendall corr: 0.24857728847995222
+-> r squared: 0.03305163882117941
+Metric: CAST ~  ResponseTime
+-> Kendall corr: 0.03759317597859276
+-> r squared: 0.0015114299151048156
+Metric: CAST ~  Correctness
+-> Kendall corr: -0.12229989761755711
+-> r squared: 0.003023786559792825
+Metric: CDENS ~  ResponseTime
+-> Kendall corr: -0.09265841753019283
+-> r squared: 0.008164201225066654
+Metric: CDENS ~  Correctness
+-> Kendall corr: 0.1403995003980417
+-> r squared: 0.024725970964857628
+Metric: CONTROL ~  ResponseTime
+-> Kendall corr: 0.06479203906820696
+-> r squared: 0.01633482673299544
+Metric: CONTROL ~  Correctness
+-> Kendall corr: -0.10931246878883935
+-> r squared: 0.04839915058220985
+Metric: D ~  ResponseTime
+-> Kendall corr: 0.21816062865728464
+-> r squared: 0.08491484929536293
+Metric: D ~  Correctness
+-> Kendall corr: -0.4138084800894974
+-> r squared: 0.24905060819593283
+Metric: E ~  ResponseTime
+-> Kendall corr: -0.07939010583494213
+-> r squared: 0.0994883806166383
+Metric: E ~  Correctness
+-> Kendall corr: 0.14347141033685276
+-> r squared: 0.30025148939761753
+Metric: evG ~  ResponseTime
+-> Kendall corr: 0.09020373903965817
+-> r squared: 0.01365350252823856
+Metric: evG ~  Correctness
+-> Kendall corr: -0.2628326012835378
+-> r squared: 0.040072279291016595
+Metric: EXEC ~  ResponseTime
+-> Kendall corr: 0.13921414178980443
+-> r squared: 0.02805125291132788
+Metric: EXEC ~  Correctness
+-> Kendall corr: -0.22663678884184216
+-> r squared: 0.08452212045229769
+Metric: EXP ~  ResponseTime
+-> Kendall corr: 0.15642788850996547
+-> r squared: 0.05809346814995462
+Metric: EXP ~  Correctness
+-> Kendall corr: -0.22978931453467435
+-> r squared: 0.1747722638303896
+Metric: IF_NEST ~  ResponseTime
+-> Kendall corr: 0.08616770142078135
+-> r squared: 0.0098480457278325
+Metric: IF_NEST ~  Correctness
+-> Kendall corr: -0.17325923272968397
+-> r squared: 0.033112272367375586
+Metric: ivG ~  ResponseTime
+-> Kendall corr: 0.06782091024917172
+-> r squared: 0.006159465029664571
+Metric: ivG ~  Correctness
+-> Kendall corr: -0.1360827634879543
+-> r squared: 0.01703159243622989
+Metric: LOC.1 ~  ResponseTime
+-> Kendall corr: 0.22002901702488545
+-> r squared: 0.06095438761983536
+Metric: LOC.1 ~  Correctness
+-> Kendall corr: -0.4036485636443699
+-> r squared: 0.17973912840096798
+Metric: LOOP ~  ResponseTime
+-> Kendall corr: 0.27256502365585894
+-> r squared: 0.08736314107352862
+Metric: LOOP ~  Correctness
+-> Kendall corr: -0.540842048529411
+-> r squared: 0.2618375212971047
+Metric: LOOP_NEST ~  ResponseTime
+-> Kendall corr: 0.27256502365585894
+-> r squared: 0.08736314107352862
+Metric: LOOP_NEST ~  Correctness
+-> Kendall corr: -0.540842048529411
+-> r squared: 0.2618375212971047
+Metric: N ~  ResponseTime
+-> Kendall corr: 0.1931977905899972
+-> r squared: 0.05820726863676678
+Metric: N ~  Correctness
+-> Kendall corr: -0.33191789877230743
+-> r squared: 0.1779439964519011
+Metric: n ~  ResponseTime
+-> Kendall corr: 0.1804218843661463
+-> r squared: 0.047367343613429126
+Metric: n ~  Correctness
+-> Kendall corr: -0.3232211579892581
+-> r squared: 0.14995673727653266
+Metric: NBD ~  ResponseTime
+-> Kendall corr: 0.25357285618690273
+-> r squared: 0.08611700580122386
+Metric: NBD ~  Correctness
+-> Kendall corr: -0.490051113465351
+-> r squared: 0.2573235128007802
+Metric: NCLOC ~  ResponseTime
+-> Kendall corr: 0.22002901702488545
+-> r squared: 0.06095438761983536
+Metric: NCLOC ~  Correctness
+-> Kendall corr: -0.4036485636443699
+-> r squared: 0.17973912840096798
+Metric: NP ~  ResponseTime
+-> Kendall corr: 0.16216534927119838
+-> r squared: 0.02657946799175999
+Metric: NP ~  Correctness
+-> Kendall corr: -0.28886325786964756
+-> r squared: 0.07594417761836715
+Metric: QCP_CRCT ~  ResponseTime
+-> Kendall corr: 0.16330799350699363
+-> r squared: 0.058517556649901256
+Metric: QCP_CRCT ~  Correctness
+-> Kendall corr: -0.2832644114435326
+-> r squared: 0.17350631841108613
+Metric: QCP_MAINT ~  ResponseTime
+-> Kendall corr: 0.17620162022840422
+-> r squared: 0.05210812682392127
+Metric: QCP_MAINT ~  Correctness
+-> Kendall corr: -0.3050957017085528
+-> r squared: 0.15896778307342369
+Metric: QCP_RLBTY ~  ResponseTime
+-> Kendall corr: 0.14259394191878713
+-> r squared: 0.04241518684406939
+Metric: QCP_RLBTY ~  Correctness
+-> Kendall corr: -0.2542464180904607
+-> r squared: 0.1288931466531955
+Metric: RETURN ~  ResponseTime
+-> Kendall corr: -0.22012740023875133
+-> r squared: 0.06498557274812497
+Metric: RETURN ~  Correctness
+-> Kendall corr: 0.34012580964959377
+-> r squared: 0.1980079519619231
+Metric: RLOC ~  ResponseTime
+-> Kendall corr: 0.20228832817324388
+-> r squared: 0.07368598674663314
+Metric: RLOC ~  Correctness
+-> Kendall corr: -0.33344881344534905
+-> r squared: 0.21738006394958628
+Metric: STAT ~  ResponseTime
+-> Kendall corr: 0.13834063504499436
+-> r squared: 0.02869362111351572
+Metric: STAT ~  Correctness
+-> Kendall corr: -0.25562817791817344
+-> r squared: 0.08593096594756615
+Metric: V ~  ResponseTime
+-> Kendall corr: 0.19444422794864233
+-> r squared: 0.06953048165915592
+Metric: V ~  Correctness
+-> Kendall corr: -0.33191789877230743
+-> r squared: 0.214067328166505
+Metric: vG ~  ResponseTime
+-> Kendall corr: 0.059258285369639736
+-> r squared: 0.005020710373250426
+Metric: vG ~  Correctness
+-> Kendall corr: -0.10069309000319977
+-> r squared: 0.016617889503153863
+Metric: CognitiveComplexity ~  ResponseTime
+-> Kendall corr: 0.10767044567660077
+-> r squared: 0.04368802833026466
+Metric: CognitiveComplexity ~  Correctness
+-> Kendall corr: -0.22240021361817655
+-> r squared: 0.13321106572324942
+
+##### 
+ correlating subjective complexity with behavioral data
+mean:42.42140468227425
+std:40.921060978147835
+   participant                    snippet  ...  Correct  ResponseTime
+0          p01                isHurricane  ...      1.0        47.802
+1          p01   RecursiveBinaryToDecimal  ...      0.0        34.019
+2          p01                     hIndex  ...      0.0        47.604
+3          p01      GreatestCommonDivisor  ...      0.0        58.899
+4          p01                CountVowels  ...      0.0        59.245
+5          p01               isPalindrome  ...      0.0        26.396
+6          p01                   DumbSort  ...      0.0        39.911
+7          p01               ArrayAverage  ...      0.0        53.870
+8          p01                 SquareRoot  ...      0.0        10.131
+10         p01                      YesNo  ...      0.0        12.631
+11         p01          ContainsSubstring  ...      0.0        60.000
+12         p01          RecursiveCrossSum  ...      0.0        49.632
+13         p01         RecursiveFactorial  ...      0.0        40.738
+14         p01  RecursiveFibonacciVariant  ...      0.0        59.202
+15         p01             RecursivePower  ...      0.0        31.113
+16         p02                CountVowels  ...      1.0        45.205
+17         p02                isHurricane  ...      1.0        21.965
+18         p02          RecursiveCrossSum  ...      1.0        38.908
+19         p02                      YesNo  ...      1.0        19.444
+20         p02               ArrayAverage  ...      1.0        58.252
+22         p02          ContainsSubstring  ...      1.0        37.264
+23         p02         RecursiveFactorial  ...      1.0        16.424
+24         p02               isPalindrome  ...      1.0        40.776
+25         p02  RecursiveFibonacciVariant  ...      1.0        25.341
+26         p02             RecursivePower  ...      1.0        54.894
+27         p02                   DumbSort  ...      1.0        40.162
+28         p02   RecursiveBinaryToDecimal  ...      1.0        38.815
+29         p02      GreatestCommonDivisor  ...      0.0        60.000
+30         p02                     hIndex  ...      0.0        60.000
+31         p03                isHurricane  ...      1.0        19.497
+32         p03                      YesNo  ...      1.0        27.260
+33         p03          RecursiveCrossSum  ...      1.0        21.649
+34         p03                CountVowels  ...      1.0        18.872
+35         p03         RecursiveFactorial  ...      1.0        20.370
+36         p03      GreatestCommonDivisor  ...      0.0        59.709
+37         p03                   DumbSort  ...      1.0        18.875
+38         p03                 SquareRoot  ...      1.0        36.423
+40         p03               isPalindrome  ...      1.0        41.390
+41         p03                     hIndex  ...      0.0        59.156
+42         p03               ArrayAverage  ...      1.0        59.958
+43         p03          ContainsSubstring  ...      0.0        58.529
+44         p03  RecursiveFibonacciVariant  ...      0.0        58.849
+45         p03   RecursiveBinaryToDecimal  ...      0.0        59.076
+46         p04                CountVowels  ...      1.0        40.815
+47         p04                isHurricane  ...      1.0        21.178
+48         p04   RecursiveBinaryToDecimal  ...      1.0        48.906
+49         p04                   DumbSort  ...      1.0        56.353
+50         p04                      YesNo  ...      1.0        20.497
+51         p04          RecursiveCrossSum  ...      0.0        60.000
+52         p04             RecursivePower  ...      1.0        31.366
+
+[50 rows x 5 columns]
+SubjComplexity ~ ResponseTime
+-> Kendall corr: 0.34179114487034634
+-> r squared: 0.18296144245133122
+SubjComplexity ~ Correctness
+-> Kendall corr: -0.7765904863601889
+-> r squared: 0.715642970540747
+Metric: LOC ~ SubjComplexity
+-> Kendall corr: 0.15961599725095202
+-> r squared: 0.03840833614984128
+Metric: McCabe ~ SubjComplexity
+-> Kendall corr: -0.09075065708911166
+-> r squared: 0.01750381619447636
+Metric: Halstead ~ SubjComplexity
+-> Kendall corr: 0.20847346762032223
+-> r squared: 0.044657056776510634
+Metric: DepDegree ~ SubjComplexity
+-> Kendall corr: 0.1570405540357941
+-> r squared: 0.008150451275225689
+
+##### 
+-> all done \o/
+
+# Analyzing fMRI and complexity metrics data
+
+##### 
+read complexity metric data
+                 Snippet  Algorithm  DepDegree  ...      V   vG  CognitiveComplexity
+0           ArrayAverage      Loops       17.0  ...  116.0  2.0                  1.0
+1      ContainsSubstring      Loops       29.0  ...  227.0  6.0                 14.0
+2            CountVowels      Loops       22.0  ...  169.0  4.0                  6.0
+3               DumbSort     IfElse       61.0  ...  211.0  6.0                  5.0
+4  GreatestCommonDivisor  Recursion       33.0  ...  129.0  4.0                  5.0
+
+[5 rows x 37 columns]
+Metric: DepDegree ~  BA: BA6
+-> Kendall corr: 0.3761920624312232
+-> r squared: 0.15601021832273695
+Metric: LOC ~  BA: BA6
+-> Kendall corr: 0.26341875207337534
+-> r squared: 0.14747886999135368
+Metric: McCabe ~  BA: BA6
+-> Kendall corr: 0.0903876907577734
+-> r squared: 0.013979235599586234
+Metric: Halstead ~  BA: BA6
+-> Kendall corr: 0.4666666666666666
+-> r squared: 0.21599447875477032
+Metric: BRANCH ~  BA: BA6
+-> Kendall corr: 0.3921907180467609
+-> r squared: 0.1565302625099419
+Metric: CALL ~  BA: BA6
+-> Kendall corr: 0.13492176805521647
+-> r squared: 0.028253549107761212
+Metric: CALLED ~  BA: BA6
+-> Kendall corr: -0.1986979474401784
+-> r squared: 0.005573094872472208
+Metric: CALLEDp ~  BA: BA6
+-> Kendall corr: -0.1986979474401784
+-> r squared: 0.005573094872472208
+Metric: CAST ~  BA: BA6
+-> Kendall corr: 0.17251638983558856
+-> r squared: 0.044160877283000104
+Metric: CDENS ~  BA: BA6
+-> Kendall corr: -0.03513641844631533
+-> r squared: 0.0005566744726410562
+Metric: CONTROL ~  BA: BA6
+-> Kendall corr: 0.1709009062032742
+-> r squared: 0.05582120987088582
+Metric: D ~  BA: BA6
+-> Kendall corr: 0.40009056945661187
+-> r squared: 0.19503943155767176
+Metric: E ~  BA: BA6
+-> Kendall corr: -0.16666666666666669
+-> r squared: 0.3217874425898797
+Metric: evG ~  BA: BA6
+-> Kendall corr: 0.12049439963601052
+-> r squared: 0.017176972064265213
+Metric: EXEC ~  BA: BA6
+-> Kendall corr: 0.10741723110591493
+-> r squared: 0.053922985501174005
+Metric: EXP ~  BA: BA6
+-> Kendall corr: 0.3529536388627275
+-> r squared: 0.2408682487430833
+Metric: IF_NEST ~  BA: BA6
+-> Kendall corr: 0.042769946138415074
+-> r squared: 0.002474092662051429
+Metric: ivG ~  BA: BA6
+-> Kendall corr: 0.2480694691784169
+-> r squared: 0.04370206591717812
+Metric: LOC.1 ~  BA: BA6
+-> Kendall corr: 0.28593138470052004
+-> r squared: 0.10352991313468424
+Metric: LOOP ~  BA: BA6
+-> Kendall corr: 0.35602582204794114
+-> r squared: 0.12478428761197152
+Metric: LOOP_NEST ~  BA: BA6
+-> Kendall corr: 0.35602582204794114
+-> r squared: 0.12478428761197152
+Metric: N ~  BA: BA6
+-> Kendall corr: 0.33614632272640715
+-> r squared: 0.21078270368032112
+Metric: n ~  BA: BA6
+-> Kendall corr: 0.3277811406876182
+-> r squared: 0.14775256428779507
+Metric: NBD ~  BA: BA6
+-> Kendall corr: 0.26210529752729134
+-> r squared: 0.09758272704345515
+Metric: NCLOC ~  BA: BA6
+-> Kendall corr: 0.28593138470052004
+-> r squared: 0.10352991313468424
+Metric: NP ~  BA: BA6
+-> Kendall corr: 0.3208833147655316
+-> r squared: 0.08369606264240144
+Metric: QCP_CRCT ~  BA: BA6
+-> Kendall corr: 0.2881769890388444
+-> r squared: 0.14960258898240195
+Metric: QCP_MAINT ~  BA: BA6
+-> Kendall corr: 0.3096261412396175
+-> r squared: 0.1803244260748253
+Metric: QCP_RLBTY ~  BA: BA6
+-> Kendall corr: 0.25941649671427414
+-> r squared: 0.13520926004203213
+Metric: RETURN ~  BA: BA6
+-> Kendall corr: -0.33584732726351557
+-> r squared: 0.12687099868450474
+Metric: RLOC ~  BA: BA6
+-> Kendall corr: 0.28593138470052004
+-> r squared: 0.11902812896648636
+Metric: STAT ~  BA: BA6
+-> Kendall corr: 0.19148542155126763
+-> r squared: 0.06623448316367044
+Metric: V ~  BA: BA6
+-> Kendall corr: 0.33614632272640715
+-> r squared: 0.24178869549547866
+Metric: vG ~  BA: BA6
+-> Kendall corr: 0.0903876907577734
+-> r squared: 0.013979235599586234
+Metric: CognitiveComplexity ~  BA: BA6
+-> Kendall corr: 0.17568209223157663
+-> r squared: 0.07223403382163518
+Metric: DepDegree ~  BA: BA21
+-> Kendall corr: 0.3761920624312232
+-> r squared: 0.24539391355129858
+Metric: LOC ~  BA: BA21
+-> Kendall corr: 0.3542528045124703
+-> r squared: 0.31326142646901
+Metric: McCabe ~  BA: BA21
+-> Kendall corr: 0.0
+-> r squared: 0.013240887200006879
+Metric: Halstead ~  BA: BA21
+-> Kendall corr: 0.3666666666666667
+-> r squared: 0.2895745300303642
+Metric: BRANCH ~  BA: BA21
+-> Kendall corr: 0.4634981213279901
+-> r squared: 0.31862147401438745
+Metric: CALL ~  BA: BA21
+-> Kendall corr: 0.22486961342536077
+-> r squared: 0.10300000113463786
+Metric: CALLED ~  BA: BA21
+-> Kendall corr: -0.2454504056613968
+-> r squared: 0.07435273021562291
+Metric: CALLEDp ~  BA: BA21
+-> Kendall corr: -0.2454504056613968
+-> r squared: 0.07435273021562291
+Metric: CAST ~  BA: BA21
+-> Kendall corr: 0.13801311186847084
+-> r squared: 0.008724461377951388
+Metric: CDENS ~  BA: BA21
+-> Kendall corr: -0.10540925533894598
+-> r squared: 0.00933923178504027
+Metric: CONTROL ~  BA: BA21
+-> Kendall corr: 0.09894262990715876
+-> r squared: 0.09780178328542641
+Metric: D ~  BA: BA21
+-> Kendall corr: 0.314964916380737
+-> r squared: 0.25785195347945034
+Metric: E ~  BA: BA21
+-> Kendall corr: -0.16666666666666669
+-> r squared: 0.28727833917589163
+Metric: evG ~  BA: BA21
+-> Kendall corr: 0.15756959952401378
+-> r squared: 0.06877303750581934
+Metric: EXEC ~  BA: BA21
+-> Kendall corr: 0.12532010295690077
+-> r squared: 0.10485105293738387
+Metric: EXP ~  BA: BA21
+-> Kendall corr: 0.25210974204480535
+-> r squared: 0.2761272973045278
+Metric: IF_NEST ~  BA: BA21
+-> Kendall corr: 0.014256648712805027
+-> r squared: 0.007700953235566989
+Metric: ivG ~  BA: BA21
+-> Kendall corr: 0.28941438070815306
+-> r squared: 0.13372072081239372
+Metric: LOC.1 ~  BA: BA21
+-> Kendall corr: 0.3205897343611891
+-> r squared: 0.20964495204496125
+Metric: LOOP ~  BA: BA21
+-> Kendall corr: 0.5026246899500345
+-> r squared: 0.3356227041097038
+Metric: LOOP_NEST ~  BA: BA21
+-> Kendall corr: 0.5026246899500345
+-> r squared: 0.3356227041097038
+Metric: N ~  BA: BA21
+-> Kendall corr: 0.2857243743174461
+-> r squared: 0.21785665861087494
+Metric: n ~  BA: BA21
+-> Kendall corr: 0.3277811406876182
+-> r squared: 0.16348004905621116
+Metric: NBD ~  BA: BA21
+-> Kendall corr: 0.4435628112000315
+-> r squared: 0.31809969428806883
+Metric: NCLOC ~  BA: BA21
+-> Kendall corr: 0.3205897343611891
+-> r squared: 0.20964495204496125
+Metric: NP ~  BA: BA21
+-> Kendall corr: 0.20203764263014956
+-> r squared: 0.05170254786466954
+Metric: QCP_CRCT ~  BA: BA21
+-> Kendall corr: 0.23732222626728364
+-> r squared: 0.21644184610639192
+Metric: QCP_MAINT ~  BA: BA21
+-> Kendall corr: 0.24267994853915967
+-> r squared: 0.20183732024160747
+Metric: QCP_RLBTY ~  BA: BA21
+-> Kendall corr: 0.1924703040138163
+-> r squared: 0.17418308829269663
+Metric: RETURN ~  BA: BA21
+-> Kendall corr: -0.3575148967643876
+-> r squared: 0.15575544189822038
+Metric: RLOC ~  BA: BA21
+-> Kendall corr: 0.3205897343611891
+-> r squared: 0.2831325873147968
+Metric: STAT ~  BA: BA21
+-> Kendall corr: 0.17407765595569785
+-> r squared: 0.12422770414252736
+Metric: V ~  BA: BA21
+-> Kendall corr: 0.2857243743174461
+-> r squared: 0.2545788395944126
+Metric: vG ~  BA: BA21
+-> Kendall corr: 0.0
+-> r squared: 0.013240887200006879
+Metric: CognitiveComplexity ~  BA: BA21
+-> Kendall corr: 0.12297746456210364
+-> r squared: 0.1376307231399188
+Metric: DepDegree ~  BA: BA39
+-> Kendall corr: 0.3419927840283847
+-> r squared: 0.21714685823167693
+Metric: LOC ~  BA: BA39
+-> Kendall corr: 0.17258469963428041
+-> r squared: 0.07752030361967492
+Metric: McCabe ~  BA: BA39
+-> Kendall corr: 0.036155076303109365
+-> r squared: 0.004550778114930518
+Metric: Halstead ~  BA: BA39
+-> Kendall corr: 0.43333333333333335
+-> r squared: 0.15749954560684143
+Metric: BRANCH ~  BA: BA39
+-> Kendall corr: 0.20203764263014956
+-> r squared: 0.0751262802016864
+Metric: CALL ~  BA: BA39
+-> Kendall corr: 0.09894262990715876
+-> r squared: 0.030841286162541285
+Metric: CALLED ~  BA: BA39
+-> Kendall corr: -0.03506434366591383
+-> r squared: 0.007801848977900935
+Metric: CALLEDp ~  BA: BA39
+-> Kendall corr: -0.03506434366591383
+-> r squared: 0.007801848977900935
+Metric: CAST ~  BA: BA39
+-> Kendall corr: 0.06900655593423542
+-> r squared: 0.006000987862505482
+Metric: CDENS ~  BA: BA39
+-> Kendall corr: -0.15811388300841894
+-> r squared: 0.01906895072629796
+Metric: CONTROL ~  BA: BA39
+-> Kendall corr: 0.04497392268507216
+-> r squared: 0.012268319127091391
+Metric: D ~  BA: BA39
+-> Kendall corr: 0.36604030822626193
+-> r squared: 0.14176562068241153
+Metric: E ~  BA: BA39
+-> Kendall corr: -0.09999999999999999
+-> r squared: 0.19962091822760045
+Metric: evG ~  BA: BA39
+-> Kendall corr: 0.0834191997480073
+-> r squared: 0.01819869353924356
+Metric: EXEC ~  BA: BA39
+-> Kendall corr: 0.1432229748078866
+-> r squared: 0.0652008543993794
+Metric: EXP ~  BA: BA39
+-> Kendall corr: 0.25210974204480535
+-> r squared: 0.14310158324874506
+Metric: IF_NEST ~  BA: BA39
+-> Kendall corr: 0.07128324356402513
+-> r squared: 0.006560951815026428
+Metric: ivG ~  BA: BA39
+-> Kendall corr: 0.04134491152973615
+-> r squared: 0.007088966100581302
+Metric: LOC.1 ~  BA: BA39
+-> Kendall corr: 0.3205897343611891
+-> r squared: 0.17713300230782075
+Metric: LOOP ~  BA: BA39
+-> Kendall corr: 0.20942695414584775
+-> r squared: 0.058349519370613834
+Metric: LOOP_NEST ~  BA: BA39
+-> Kendall corr: 0.20942695414584775
+-> r squared: 0.058349519370613834
+Metric: N ~  BA: BA39
+-> Kendall corr: 0.2857243743174461
+-> r squared: 0.1362547035033125
+Metric: n ~  BA: BA39
+-> Kendall corr: 0.13801311186847084
+-> r squared: 0.0228539806086927
+Metric: NBD ~  BA: BA39
+-> Kendall corr: 0.20161945963637795
+-> r squared: 0.0936602468571628
+Metric: NCLOC ~  BA: BA39
+-> Kendall corr: 0.3205897343611891
+-> r squared: 0.17713300230782075
+Metric: NP ~  BA: BA39
+-> Kendall corr: 0.4872672557550666
+-> r squared: 0.25714421177859953
+Metric: QCP_CRCT ~  BA: BA39
+-> Kendall corr: 0.2203706386767634
+-> r squared: 0.09800664677367395
+Metric: QCP_MAINT ~  BA: BA39
+-> Kendall corr: 0.25941649671427414
+-> r squared: 0.11371876079123168
+Metric: QCP_RLBTY ~  BA: BA39
+-> Kendall corr: 0.20920685218893076
+-> r squared: 0.07918226043364623
+Metric: RETURN ~  BA: BA39
+-> Kendall corr: -0.20584191025828374
+-> r squared: 0.04105555800033283
+Metric: RLOC ~  BA: BA39
+-> Kendall corr: 0.2512730350398509
+-> r squared: 0.09114594094031421
+Metric: STAT ~  BA: BA39
+-> Kendall corr: 0.17407765595569785
+-> r squared: 0.051003133604573564
+Metric: V ~  BA: BA39
+-> Kendall corr: 0.21849510977216466
+-> r squared: 0.10550836788897598
+Metric: vG ~  BA: BA39
+-> Kendall corr: 0.036155076303109365
+-> r squared: 0.004550778114930518
+Metric: CognitiveComplexity ~  BA: BA39
+-> Kendall corr: 0.05270462766947299
+-> r squared: 0.026142578757074784
+Metric: DepDegree ~  BA: BA44
+-> Kendall corr: 0.22229530961845007
+-> r squared: 0.0806671500114031
+Metric: LOC ~  BA: BA44
+-> Kendall corr: 0.09991745768300445
+-> r squared: 0.01842313399421925
+Metric: McCabe ~  BA: BA44
+-> Kendall corr: -0.0903876907577734
+-> r squared: 0.01050282048121681
+Metric: Halstead ~  BA: BA44
+-> Kendall corr: 0.31666666666666665
+-> r squared: 0.15860739937738774
+Metric: BRANCH ~  BA: BA44
+-> Kendall corr: 0.08319197049476747
+-> r squared: 0.05398331415948039
+Metric: CALL ~  BA: BA44
+-> Kendall corr: 0.04497392268507216
+-> r squared: 0.01757437702771664
+Metric: CALLED ~  BA: BA44
+-> Kendall corr: 0.08181680188713228
+-> r squared: 0.07357194687586091
+Metric: CALLEDp ~  BA: BA44
+-> Kendall corr: 0.08181680188713228
+-> r squared: 0.07357194687586091
+Metric: CAST ~  BA: BA44
+-> Kendall corr: 0.20701966780270628
+-> r squared: 0.04729955943815108
+Metric: CDENS ~  BA: BA44
+-> Kendall corr: -0.15811388300841894
+-> r squared: 0.005154565860950541
+Metric: CONTROL ~  BA: BA44
+-> Kendall corr: -0.08095306083312988
+-> r squared: 0.0017029109331994357
+Metric: D ~  BA: BA44
+-> Kendall corr: 0.314964916380737
+-> r squared: 0.15904863526346655
+Metric: E ~  BA: BA44
+-> Kendall corr: -0.08333333333333334
+-> r squared: 0.0629468070086144
+Metric: evG ~  BA: BA44
+-> Kendall corr: -0.009268799972000811
+-> r squared: 0.00930698535734731
+Metric: EXEC ~  BA: BA44
+-> Kendall corr: -0.017902871850985824
+-> r squared: 4.984070265042075e-05
+Metric: EXP ~  BA: BA44
+-> Kendall corr: 0.10084389681792215
+-> r squared: 0.04502599472701211
+Metric: IF_NEST ~  BA: BA44
+-> Kendall corr: 0.014256648712805027
+-> r squared: 0.0027686550012730616
+Metric: ivG ~  BA: BA44
+-> Kendall corr: 0.0
+-> r squared: 0.0008268966862028209
+Metric: LOC.1 ~  BA: BA44
+-> Kendall corr: 0.1646271608881782
+-> r squared: 0.037302142580043024
+Metric: LOOP ~  BA: BA44
+-> Kendall corr: 0.1465988679020934
+-> r squared: 0.025206963063214204
+Metric: LOOP_NEST ~  BA: BA44
+-> Kendall corr: 0.1465988679020934
+-> r squared: 0.025206963063214204
+Metric: N ~  BA: BA44
+-> Kendall corr: 0.13445852909056288
+-> r squared: 0.03149781838172522
+Metric: n ~  BA: BA44
+-> Kendall corr: 0.10350983390135314
+-> r squared: 0.007936661376381016
+Metric: NBD ~  BA: BA44
+-> Kendall corr: 0.12097167578182677
+-> r squared: 0.05694584325098243
+Metric: NCLOC ~  BA: BA44
+-> Kendall corr: 0.1646271608881782
+-> r squared: 0.037302142580043024
+Metric: NP ~  BA: BA44
+-> Kendall corr: 0.41595985247383727
+-> r squared: 0.1523448181648971
+Metric: QCP_CRCT ~  BA: BA44
+-> Kendall corr: 0.06780635036208103
+-> r squared: 0.03700642237599079
+Metric: QCP_MAINT ~  BA: BA44
+-> Kendall corr: 0.10878756313824399
+-> r squared: 0.019430663758967372
+Metric: QCP_RLBTY ~  BA: BA44
+-> Kendall corr: 0.05857791861290061
+-> r squared: 0.0062905183756775465
+Metric: RETURN ~  BA: BA44
+-> Kendall corr: -0.11917163225479586
+-> r squared: 0.03412378251185463
+Metric: RLOC ~  BA: BA44
+-> Kendall corr: 0.09531046156684
+-> r squared: 0.0034216071326068336
+Metric: STAT ~  BA: BA44
+-> Kendall corr: 0.0
+-> r squared: 0.00011570713950813038
+Metric: V ~  BA: BA44
+-> Kendall corr: 0.10084389681792215
+-> r squared: 0.02591596117003709
+Metric: vG ~  BA: BA44
+-> Kendall corr: -0.0903876907577734
+-> r squared: 0.01050282048121681
+Metric: CognitiveComplexity ~  BA: BA44
+-> Kendall corr: -0.05270462766947299
+-> r squared: 0.0029109639443403237
+Metric: DepDegree ~  BA: BA32
+-> Kendall corr: -0.290693866424127
+-> r squared: 0.02761088427869296
+Metric: LOC ~  BA: BA32
+-> Kendall corr: -0.3724196150002893
+-> r squared: 0.16859189336994104
+Metric: McCabe ~  BA: BA32
+-> Kendall corr: -0.018077538151554683
+-> r squared: 0.004608829679732103
+Metric: Halstead ~  BA: BA32
+-> Kendall corr: -0.38333333333333336
+-> r squared: 0.2035710911489886
+Metric: BRANCH ~  BA: BA32
+-> Kendall corr: -0.5348055246092194
+-> r squared: 0.32552544136498396
+Metric: CALL ~  BA: BA32
+-> Kendall corr: -0.24285918249938965
+-> r squared: 0.05195706715473484
+Metric: CALLED ~  BA: BA32
+-> Kendall corr: 0.08181680188713228
+-> r squared: 0.0017204932042680433
+Metric: CALLEDp ~  BA: BA32
+-> Kendall corr: 0.08181680188713228
+-> r squared: 0.0017204932042680433
+Metric: CAST ~  BA: BA32
+-> Kendall corr: 0.03450327796711771
+-> r squared: 0.0018158319413943626
+Metric: CDENS ~  BA: BA32
+-> Kendall corr: -0.05270462766947299
+-> r squared: 0.00861448543819293
+Metric: CONTROL ~  BA: BA32
+-> Kendall corr: -0.06296349175910103
+-> r squared: 0.017923092364602305
+Metric: D ~  BA: BA32
+-> Kendall corr: -0.34901517761108697
+-> r squared: 0.18494020553011453
+Metric: E ~  BA: BA32
+-> Kendall corr: 0.25
+-> r squared: 0.22723355780272178
+Metric: evG ~  BA: BA32
+-> Kendall corr: -0.3244079990200283
+-> r squared: 0.1270277259717947
+Metric: EXEC ~  BA: BA32
+-> Kendall corr: -0.0716114874039433
+-> r squared: 0.0005045609522888433
+Metric: EXP ~  BA: BA32
+-> Kendall corr: -0.21849510977216466
+-> r squared: 0.07306291299286224
+Metric: IF_NEST ~  BA: BA32
+-> Kendall corr: -0.18533643326646534
+-> r squared: 0.02876132541971982
+Metric: ivG ~  BA: BA32
+-> Kendall corr: -0.28941438070815306
+-> r squared: 0.08010444612876423
+Metric: LOC.1 ~  BA: BA32
+-> Kendall corr: -0.21661468537918183
+-> r squared: 0.018945442596520853
+Metric: LOOP ~  BA: BA32
+-> Kendall corr: -0.460739299120865
+-> r squared: 0.23023805468080452
+Metric: LOOP_NEST ~  BA: BA32
+-> Kendall corr: -0.460739299120865
+-> r squared: 0.23023805468080452
+Metric: N ~  BA: BA32
+-> Kendall corr: -0.25210974204480535
+-> r squared: 0.06272567036313237
+Metric: n ~  BA: BA32
+-> Kendall corr: -0.3967876966218536
+-> r squared: 0.18166964170644984
+Metric: NBD ~  BA: BA32
+-> Kendall corr: -0.4637247571636693
+-> r squared: 0.2629003935984681
+Metric: NCLOC ~  BA: BA32
+-> Kendall corr: -0.21661468537918183
+-> r squared: 0.018945442596520853
+Metric: NP ~  BA: BA32
+-> Kendall corr: -0.2495759114843024
+-> r squared: 0.01016430962952952
+Metric: QCP_CRCT ~  BA: BA32
+-> Kendall corr: -0.16951587590520262
+-> r squared: 0.05677881300227727
+Metric: QCP_MAINT ~  BA: BA32
+-> Kendall corr: -0.20920685218893076
+-> r squared: 0.0482855145350829
+Metric: QCP_RLBTY ~  BA: BA32
+-> Kendall corr: -0.15899720766358738
+-> r squared: 0.031053731147201332
+Metric: RETURN ~  BA: BA32
+-> Kendall corr: 0.24917704926002768
+-> r squared: 0.08280139390634357
+Metric: RLOC ~  BA: BA32
+-> Kendall corr: -0.2512730350398509
+-> r squared: 0.04896243233778307
+Metric: STAT ~  BA: BA32
+-> Kendall corr: -0.12185435916898849
+-> r squared: 0.001240022363538872
+Metric: V ~  BA: BA32
+-> Kendall corr: -0.3025316904537665
+-> r squared: 0.1280476317292847
+Metric: vG ~  BA: BA32
+-> Kendall corr: -0.018077538151554683
+-> r squared: 0.004608829679732103
+Metric: CognitiveComplexity ~  BA: BA32
+-> Kendall corr: -0.15811388300841894
+-> r squared: 0.08102973047557378
+Metric: DepDegree ~  BA: BA31
+-> Kendall corr: -0.27359422722270776
+-> r squared: 0.032762545133701464
+Metric: LOC ~  BA: BA31
+-> Kendall corr: -0.26341875207337534
+-> r squared: 0.16003792659540922
+Metric: McCabe ~  BA: BA31
+-> Kendall corr: 0.05423261445466404
+-> r squared: 0.0025930136605787995
+Metric: Halstead ~  BA: BA31
+-> Kendall corr: -0.3
+-> r squared: 0.09559687896239587
+Metric: BRANCH ~  BA: BA31
+-> Kendall corr: -0.4634981213279901
+-> r squared: 0.20842670112360787
+Metric: CALL ~  BA: BA31
+-> Kendall corr: -0.18889047527730304
+-> r squared: 0.04938733792994784
+Metric: CALLED ~  BA: BA31
+-> Kendall corr: 0.15194548921895995
+-> r squared: 0.015708703151797697
+Metric: CALLEDp ~  BA: BA31
+-> Kendall corr: 0.15194548921895995
+-> r squared: 0.015708703151797697
+Metric: CAST ~  BA: BA31
+-> Kendall corr: -0.24152294576982394
+-> r squared: 0.08219702123564947
+Metric: CDENS ~  BA: BA31
+-> Kendall corr: -0.017568209223157664
+-> r squared: 0.0038835084452583423
+Metric: CONTROL ~  BA: BA31
+-> Kendall corr: -0.008994784537014432
+-> r squared: 0.011255225930733203
+Metric: D ~  BA: BA31
+-> Kendall corr: -0.2468643939200371
+-> r squared: 0.0808407843763719
+Metric: E ~  BA: BA31
+-> Kendall corr: 0.2333333333333333
+-> r squared: 0.3081935507727058
+Metric: evG ~  BA: BA31
+-> Kendall corr: -0.194644799412017
+-> r squared: 0.04594080999440849
+Metric: EXEC ~  BA: BA31
+-> Kendall corr: 0.0
+-> r squared: 0.0022462541295286517
+Metric: EXP ~  BA: BA31
+-> Kendall corr: -0.18488047749952397
+-> r squared: 0.09481848935171419
+Metric: IF_NEST ~  BA: BA31
+-> Kendall corr: -0.014256648712805027
+-> r squared: 0.0005618270685279612
+Metric: ivG ~  BA: BA31
+-> Kendall corr: -0.26874192494328497
+-> r squared: 0.08403463160639933
+Metric: LOC.1 ~  BA: BA31
+-> Kendall corr: -0.14729798605784364
+-> r squared: 0.014185556987816034
+Metric: LOOP ~  BA: BA31
+-> Kendall corr: -0.4816819945354498
+-> r squared: 0.28430591406957934
+Metric: LOOP_NEST ~  BA: BA31
+-> Kendall corr: -0.4816819945354498
+-> r squared: 0.28430591406957934
+Metric: N ~  BA: BA31
+-> Kendall corr: -0.18488047749952397
+-> r squared: 0.0683836309215734
+Metric: n ~  BA: BA31
+-> Kendall corr: -0.4485426135725302
+-> r squared: 0.2490726614021606
+Metric: NBD ~  BA: BA31
+-> Kendall corr: -0.3830769733091181
+-> r squared: 0.19219935706656016
+Metric: NCLOC ~  BA: BA31
+-> Kendall corr: -0.14729798605784364
+-> r squared: 0.014185556987816034
+Metric: NP ~  BA: BA31
+-> Kendall corr: -0.08319197049476747
+-> r squared: 9.68285325732502e-05
+Metric: QCP_CRCT ~  BA: BA31
+-> Kendall corr: -0.11866111313364182
+-> r squared: 0.029877338668025066
+Metric: QCP_MAINT ~  BA: BA31
+-> Kendall corr: -0.1422606594884729
+-> r squared: 0.0537762751517268
+Metric: QCP_RLBTY ~  BA: BA31
+-> Kendall corr: -0.09205101496312953
+-> r squared: 0.035416504840245736
+Metric: RETURN ~  BA: BA31
+-> Kendall corr: 0.29251218826177167
+-> r squared: 0.11420440127541763
+Metric: RLOC ~  BA: BA31
+-> Kendall corr: -0.18195633571851272
+-> r squared: 0.07861637096703333
+Metric: STAT ~  BA: BA31
+-> Kendall corr: -0.06963106238227913
+-> r squared: 0.00558321009350273
+Metric: V ~  BA: BA31
+-> Kendall corr: -0.235302425908485
+-> r squared: 0.14227467329161625
+Metric: vG ~  BA: BA31
+-> Kendall corr: 0.05423261445466404
+-> r squared: 0.0025930136605787995
+Metric: CognitiveComplexity ~  BA: BA31
+-> Kendall corr: -0.08784104611578832
+-> r squared: 0.04894926078966945
+
+
+### computing stats for BA6
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    BA6   R-squared:                       0.229
+Model:                            OLS   Adj. R-squared:                  0.037
+Method:                 Least Squares   F-statistic:                     1.191
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.354
+Time:                        07:59:18   Log-Likelihood:                 4.0961
+No. Observations:                  16   AIC:                           -0.1922
+Df Residuals:                      12   BIC:                             2.898
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.3614      0.212      6.432      0.000       0.900       1.823
+Halstead       0.0091      0.009      0.996      0.339      -0.011       0.029
+McCabe        -0.0084      0.040     -0.211      0.836      -0.095       0.078
+DepDegree      0.0028      0.006      0.458      0.655      -0.010       0.016
+==============================================================================
+Omnibus:                        2.140   Durbin-Watson:                   1.629
+Prob(Omnibus):                  0.343   Jarque-Bera (JB):                0.485
+Skew:                          -0.072   Prob(JB):                        0.785
+Kurtosis:                       3.840   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F    PR(>F)
+Intercept  1.935700   1.0  41.375058  0.000032
+Halstead   0.046444   1.0   0.992730  0.338744
+McCabe     0.002088   1.0   0.044635  0.836222
+DepDegree  0.009822   1.0   0.209951  0.654993
+Residual   0.561411  12.0        NaN       NaN
+
+
+### computing stats for BA21
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   BA21   R-squared:                       0.333
+Model:                            OLS   Adj. R-squared:                  0.166
+Method:                 Least Squares   F-statistic:                     1.996
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.168
+Time:                        07:59:18   Log-Likelihood:                 5.6670
+No. Observations:                  16   AIC:                            -3.334
+Df Residuals:                      12   BIC:                           -0.2436
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.2875      0.192      6.711      0.000       0.869       1.705
+Halstead       0.0086      0.008      1.048      0.315      -0.009       0.027
+McCabe        -0.0179      0.036     -0.497      0.628      -0.096       0.060
+DepDegree      0.0048      0.005      0.879      0.397      -0.007       0.017
+==============================================================================
+Omnibus:                        2.128   Durbin-Watson:                   1.596
+Prob(Omnibus):                  0.345   Jarque-Bera (JB):                0.998
+Skew:                           0.071   Prob(JB):                        0.607
+Kurtosis:                       1.785   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F    PR(>F)
+Intercept  1.731218   1.0  45.032883  0.000022
+Halstead   0.042235   1.0   1.098639  0.315218
+McCabe     0.009513   1.0   0.247455  0.627862
+DepDegree  0.029711   1.0   0.772840  0.396602
+Residual   0.461321  12.0        NaN       NaN
+
+
+### computing stats for BA39
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   BA39   R-squared:                       0.262
+Model:                            OLS   Adj. R-squared:                  0.078
+Method:                 Least Squares   F-statistic:                     1.422
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.285
+Time:                        07:59:18   Log-Likelihood:               -0.27874
+No. Observations:                  16   AIC:                             8.557
+Df Residuals:                      12   BIC:                             11.65
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.8422      0.278      6.622      0.000       1.236       2.448
+Halstead       0.0034      0.012      0.286      0.780      -0.023       0.029
+McCabe        -0.0389      0.052     -0.747      0.470      -0.152       0.075
+DepDegree      0.0103      0.008      1.300      0.218      -0.007       0.028
+==============================================================================
+Omnibus:                        0.014   Durbin-Watson:                   1.919
+Prob(Omnibus):                  0.993   Jarque-Bera (JB):                0.136
+Skew:                          -0.034   Prob(JB):                        0.934
+Kurtosis:                       2.553   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F    PR(>F)
+Intercept  3.544618   1.0  43.850358  0.000025
+Halstead   0.006617   1.0   0.081862  0.779669
+McCabe     0.045046   1.0   0.557266  0.469737
+DepDegree  0.136554   1.0   1.689303  0.218106
+Residual   0.970013  12.0        NaN       NaN
+
+
+### computing stats for BA44
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   BA44   R-squared:                       0.219
+Model:                            OLS   Adj. R-squared:                  0.023
+Method:                 Least Squares   F-statistic:                     1.120
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.380
+Time:                        07:59:18   Log-Likelihood:                 4.6152
+No. Observations:                  16   AIC:                            -1.230
+Df Residuals:                      12   BIC:                             1.860
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.6431      0.205      8.019      0.000       1.197       2.089
+Halstead       0.0080      0.009      0.913      0.379      -0.011       0.027
+McCabe        -0.0368      0.038     -0.960      0.356      -0.120       0.047
+DepDegree      0.0030      0.006      0.515      0.616      -0.010       0.016
+==============================================================================
+Omnibus:                        0.313   Durbin-Watson:                   1.656
+Prob(Omnibus):                  0.855   Jarque-Bera (JB):                0.467
+Skew:                           0.125   Prob(JB):                        0.792
+Kurtosis:                       2.202   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F    PR(>F)
+Intercept  2.819551   1.0  64.307637  0.000004
+Halstead   0.036542   1.0   0.833450  0.379253
+McCabe     0.040376   1.0   0.920882  0.356180
+DepDegree  0.011627   1.0   0.265176  0.615939
+Residual   0.526137  12.0        NaN       NaN
+
+
+### computing stats for BA32
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   BA32   R-squared:                       0.253
+Model:                            OLS   Adj. R-squared:                  0.067
+Method:                 Least Squares   F-statistic:                     1.358
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.302
+Time:                        07:59:18   Log-Likelihood:                 4.2843
+No. Observations:                  16   AIC:                           -0.5686
+Df Residuals:                      12   BIC:                             2.522
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -1.4365      0.209     -6.868      0.000      -1.892      -0.981
+Halstead      -0.0159      0.009     -1.766      0.103      -0.035       0.004
+McCabe         0.0157      0.039      0.400      0.696      -0.070       0.101
+DepDegree      0.0030      0.006      0.503      0.624      -0.010       0.016
+==============================================================================
+Omnibus:                        3.702   Durbin-Watson:                   2.005
+Prob(Omnibus):                  0.157   Jarque-Bera (JB):                1.586
+Skew:                          -0.405   Prob(JB):                        0.453
+Kurtosis:                       1.688   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F    PR(>F)
+Intercept  2.155273   1.0  47.164856  0.000017
+Halstead   0.142436   1.0   3.116999  0.102887
+McCabe     0.007312   1.0   0.160022  0.696166
+DepDegree  0.011539   1.0   0.252517  0.624403
+Residual   0.548359  12.0        NaN       NaN
+
+
+### computing stats for BA31
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   BA31   R-squared:                       0.113
+Model:                            OLS   Adj. R-squared:                 -0.108
+Method:                 Least Squares   F-statistic:                    0.5113
+Date:                Fri, 12 Feb 2021   Prob (F-statistic):              0.682
+Time:                        07:59:18   Log-Likelihood:                 5.3770
+No. Observations:                  16   AIC:                            -2.754
+Df Residuals:                      12   BIC:                            0.3363
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -1.8993      0.195     -9.722      0.000      -2.325      -1.474
+Halstead      -0.0071      0.008     -0.842      0.416      -0.025       0.011
+McCabe         0.0169      0.037      0.462      0.652      -0.063       0.097
+DepDegree     -0.0005      0.006     -0.084      0.934      -0.013       0.012
+==============================================================================
+Omnibus:                        1.616   Durbin-Watson:                   1.490
+Prob(Omnibus):                  0.446   Jarque-Bera (JB):                0.547
+Skew:                           0.441   Prob(JB):                        0.761
+Kurtosis:                       3.208   Cond. No.                         119.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+             sum_sq    df          F        PR(>F)
+Intercept  3.767492   1.0  94.512812  4.853765e-07
+Halstead   0.028289   1.0   0.709674  4.160267e-01
+McCabe     0.008511   1.0   0.213498  6.523040e-01
+DepDegree  0.000283   1.0   0.007102  9.342282e-01
+Residual   0.478347  12.0        NaN           NaN
+subj_complexity: ~  BA: BA6
+Kendall corr: 0.4327123114974866
+r squared: 0.3727055303628837
+subj_complexity: ~  BA: BA21
+Kendall corr: 0.5865655778077042
+r squared: 0.5215868764967131
+subj_complexity: ~  BA: BA39
+Kendall corr: 0.47117562807504104
+r squared: 0.4429209096139196
+subj_complexity: ~  BA: BA44
+Kendall corr: 0.5096389446525955
+r squared: 0.4545257519680722
+subj_complexity: ~  BA: BA32
+Kendall corr: -0.7019555275403673
+r squared: 0.7337570574632641
+subj_complexity: ~  BA: BA31
+Kendall corr: -0.5288706029413726
+r squared: 0.4513952336804839
