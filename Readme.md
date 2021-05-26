@@ -53,6 +53,10 @@ pytest
 
 The analysis output is located in `/analysis/output`.
 
+## Test Your Own Metric?
+
+If you want to test your own metric and evaluate whether it better fits our captured data, please add an additional column with the metric values for each snippet in `data/metrics/SnippetComplexityMetricsValues.csv`. Then, start a full pipeline run as described above. Please contact us if you have any problems.
+
 # Results
 
 For convenience, we provide all output that the analysis script yields for our data in `/analysis/output`.
