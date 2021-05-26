@@ -2,7 +2,7 @@
 
 ![Python analysis pipeline](https://github.com/brains-on-code/fMRI-complexity-metrics-icse2021/workflows/Python%20analysis%20pipeline/badge.svg)
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4434423.svg)](https://doi.org/10.5281/zenodo.4434423)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4805277.svg)](https://doi.org/10.5281/zenodo.4805277)
 
 This repository contains the replication package, analysis scripts, and additional information on our paper accepted at ICSE 2021.
 
