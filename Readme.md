@@ -6,7 +6,9 @@
 
 This repository contains the replication package, analysis scripts, and additional information on our paper accepted at ICSE 2021.
 
-Publication: Norman Peitek, Sven Apel, Chris Parnin, André Brechmann, and Janet Siegmund. *Program Comprehension and Code Complexity Metrics: An fMRI Study*. In Proceedings of the International Conference of Software Engineering (ICSE), 2021
+Publication: Norman Peitek, Sven Apel, Chris Parnin, André Brechmann, and Janet Siegmund. *Program Comprehension and Code Complexity Metrics: An fMRI Study*. In Proceedings of the International Conference of Software Engineering (ICSE), 2021 ([preprint pdf](https://www.tu-chemnitz.de/informatik/ST/publications/papers/ICSE21.pdf), [Digital Library](https://doi.ieeecomputersociety.org/10.1109/ICSE43902.2021.00056))
+
+
 
 # Replication Package
 
