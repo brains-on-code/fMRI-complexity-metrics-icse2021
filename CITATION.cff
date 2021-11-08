@@ -22,7 +22,7 @@ doi: 10.5281/zenodo.4805277
 date-released: 2021-05-26
 url: "https://github.com/brains-on-code/fMRI-complexity-metrics-icse2021"
 preferred-citation:
-  type: conference
+  type: proceedings
   authors:
   - family-names: "Peitek"
     given-names: "Norman"
@@ -40,7 +40,7 @@ preferred-citation:
     given-names: "Janet"
     orcid: "https://orcid.org/0000-0002-5815-266X"
   doi: "10.1109/ICSE43902.2021.00056"
-  journal: "International Conference on Software Engineering (ICSE)"
+  conference: "International Conference on Software Engineering (ICSE)"
   month: 5
   start: 524 # First page number 
   end: 536 # Last page number
