@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use our data or replication package, please cite it as below."
+authors:
+- family-names: "Peitek"
+  given-names: "Norman"
+  orcid: "https://orcid.org/0000-0001-7828-4558"
+- family-names: "Apel"
+  given-names: "Sven"
+  orcid: "https://orcid.org/0000-0003-3687-2233"
+- family-names: "Parnin"
+  given-names: "Chris"
+  orcid: "https://orcid.org/0000-0001-6182-815X"
+- family-names: "Brechmann"
+  given-names: "André"
+  orcid: "https://orcid.org/0000-0003-3903-0840"
+- family-names: "Siegmund"
+  given-names: "Janet"
+  orcid: "https://orcid.org/0000-0002-5815-266X"
+title: "Program Comprehension and Code Complexity Metrics: An fMRI Study"
+version: 1.0.0
+doi: 10.5281/zenodo.4805277
+date-released: 2021-05-26
+url: "https://github.com/brains-on-code/fMRI-complexity-metrics-icse2021"
+preferred-citation:
+  type: conference
+  authors:
+  - family-names: "Peitek"
+    given-names: "Norman"
+    orcid: "https://orcid.org/0000-0001-7828-4558"
+  - family-names: "Apel"
+    given-names: "Sven"
+    orcid: "https://orcid.org/0000-0003-3687-2233"
+  - family-names: "Parnin"
+    given-names: "Chris"
+    orcid: "https://orcid.org/0000-0001-6182-815X"
+  - family-names: "Brechmann"
+    given-names: "André"
+    orcid: "https://orcid.org/0000-0003-3903-0840"
+  - family-names: "Siegmund"
+    given-names: "Janet"
+    orcid: "https://orcid.org/0000-0002-5815-266X"
+  doi: "10.1109/ICSE43902.2021.00056"
+  journal: "International Conference on Software Engineering (ICSE)"
+  month: 5
+  start: 524 # First page number 
+  end: 536 # Last page number
+  title: "Program Comprehension and Code Complexity Metrics: An fMRI Study"
+  year: 2021
+  
+  Norman Peitek, Sven Apel, Chris Parnin, André Brechmann, and Janet Siegmund
