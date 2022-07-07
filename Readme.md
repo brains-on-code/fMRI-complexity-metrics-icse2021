@@ -121,4 +121,4 @@ This repository is licensed under a
 
 # Contact
 
-If you have questions, please contact me directly: `norman.peitek@lin-magdeburg.de`. Thank you!
+If you have questions, please contact me directly: `peitek@cs.uni-saarland.de`. Thank you!
